@@ -41,4 +41,10 @@ end
 
 This is referred to as **memoization**, which basically says "if we haven't set this `@current_user` variable yet, then we want to execute this code to set it". The next time we hit this method, we don't have to hit the database again.
 
-Elixir, however, is a *functional* language where ruby is object-oriented. This means we don't have objects or a concept of state in elixir, which makes for an interesting dilemma when attempting to save the results of this query for future requests.
+Elixir, however, is a *functional* language where ruby is object-oriented. This means we don't have objects or a concept of state in elixir, which makes for an interesting dilemma when attempting to save the results of this query for future requests. If elixir has no concept of state, then how do we cache the result of this function call to avoid unecessary repeat queries during the request cycle?
+
+Well, it turns out that there is something called an `Agent` in elixir that may be just what we need. It's a way of storing and accessing state across processes or within a single process.
+
+*Perfect.*
+
+Now let's see what we can do.
