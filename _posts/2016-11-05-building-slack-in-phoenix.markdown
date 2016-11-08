@@ -59,7 +59,7 @@ This is referred to as **memoization**, which basically says "if we haven't set 
 
 Elixir, however, is a *functional* language where ruby is object-oriented. This means we don't have objects or a concept of state in elixir, which makes for an interesting dilemma when attempting to save the results of this query for future requests. If elixir has no concept of state, then how do we cache the result of this function call to avoid unecessary repeat queries during the request cycle?
 
-## Introducting: `Plug` and `assigns`
+## Introducing: `Plug` and `assigns`
 
 After talking to some folks in the Elixir Slack, I realized this is best done using `Plug` to run the query once and store the result in `assigns`. What are these exactly?
 
@@ -98,7 +98,7 @@ Plugs require two methods: `init/1` and `call/2`. We don't need to do anything o
 
 Let's add this plug to the end of our pipeline so we hit it during the request cycle.
 
-{% hightlight elixir %}
+{% highlight elixir %}
 # web/route.ex
 
 pipeline :browser do
@@ -109,7 +109,7 @@ pipeline :browser do
     plug :put_secure_browser_headers
     plug Jumper.AssignUser
   end
-{% endhighlight }
+{% endhighlight %}
 
 Next we need to modify `Session.logged_in?` to check the `assigns` value:
 
@@ -117,7 +117,7 @@ Next we need to modify `Session.logged_in?` to check the `assigns` value:
 # web/models/session.ex
 
 def logged_in?(conn), do: !!conn.assigns[:current_user]
-{% endhighlight }
+{% endhighlight %}
 
 We need to be able to access our `logged_in?/1` method from the view, so we should import it in `web/web.ex`. In `view/0` under the `quote` block, we add `import Jumper.Session, only: [logged_in?: 1]`.
 
@@ -169,7 +169,7 @@ Add this method in `web.ex`:
 # web/web.ex
 
 import Jumper.Session, only: [logged_in?: 1, current_user: 1]
-{% end %}
+{% endhighlight %}
 
 And then change our references to point to our new function:
 
