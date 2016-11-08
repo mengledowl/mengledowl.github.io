@@ -116,7 +116,7 @@ We need to be able to access our `logged_in?/1` method from the view, so we shou
 {% highlight elixir %}
 # web/web.ex
 
-quote` block, we add `import Jumper.Session, only: [logged_in?: 1]
+import Jumper.Session, only: [logged_in?: 1]
 {% endhighlight %}
 
 Now we should be able to use our newly stored `current_user` in the template, so lets use it to set up the navbar.
