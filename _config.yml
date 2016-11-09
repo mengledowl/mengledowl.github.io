@@ -28,3 +28,6 @@ url: "https://mengledowl.github.io" # the base hostname & protocol for your site
 markdown: kramdown
 theme: jekyll-swiss
 theme-color: black
+
+sass:
+    sass_dir: _sass
