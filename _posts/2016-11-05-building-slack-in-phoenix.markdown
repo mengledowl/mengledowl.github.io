@@ -1,14 +1,14 @@
 ---
 layout: post
-title:  "Jumper: A Simple Slack Clone In Phoenix And Elixir"
+title:  "Memoization In Phoenix"
 date:   2016-11-05
 categories: elixir phoenix
 ---
-I've been really interested in learning Phoenix/Elixir lately, so I've decided to build a Slack clone that I'm calling "Jumper" just to learn my way around the language/framework. I'm not sure how far I'll take it, but for now, I'm diving into it with the goal of making a functional IRC style web app with channels and user accounts. You can view the source code [here](https://github.com/mengledowl/jumper).
+I've been really interested in learning Phoenix/Elixir lately, so I've decided to build a Slack clone that I'm calling "Jumper" just to learn my way around the language/framework. I'm not sure how far I'll take it, but for now, I'm diving into it with the goal of making a functional IRC style web app with channels and user accounts. You can view the source code <a href="https://github.com/mengledowl/jumper" target="_blank">here</a>.
 
 The first goal is registration and authentication.
 
-I want to really learn the ins and outs here, so while I could have used a library, I chose to roll it by hand. To get me started, I [followed a great tutorial](http://nithinbekal.com/posts/phoenix-authentication/) on it and filled in the blanks by writing tests (if you decide to follow along, make sure you follow that first for some context). As I finished up, I came across an interesting issue though...
+I want to really learn the ins and outs here, so while I could have used a library, I chose to roll it by hand. To get me started, I <a href="http://nithinbekal.com/posts/phoenix-authentication/" target="_blank">followed a great tutorial</a> on it and filled in the blanks by writing tests (if you decide to follow along, make sure you follow that first for some context). As I finished up, I came across an interesting issue though...
 
 ## The "Memoization" Problem
 
@@ -16,8 +16,8 @@ You can see here a helper method used to grab the current user from the session 
 
 {% highlight elixir %}
 def current_user(conn) do
-	id = Plug.Conn.get_session(conn, :current_user)
-	if id, do: Jumper.Repo.get(User, id)
+  id = Plug.Conn.get_session(conn, :current_user)
+  if id, do: Jumper.Repo.get(User, id)
 end
 {% endhighlight %}
 
@@ -41,13 +41,13 @@ In ruby this would be simple to solve with something like:
 
 {% highlight elixir %}
 def current_user
-	[...]
-	@current_user ||= User.find(id)
-	[...]
+  [...]
+  @current_user ||= User.find(id)
+  [...]
 end
 {% endhighlight %}
 
-This is referred to as **[memoization](https://en.wikipedia.org/wiki/Memoization)**, which basically says "if we haven't set this `@current_user` variable yet, then we want to execute this code to set it". The next time we hit this method, we don't have to hit the database again.
+This is referred to as <a href="https://en.wikipedia.org/wiki/Memoization" target="_blank">memoization</a>, which basically says "if we haven't set this `@current_user` variable yet, then we want to execute this code to set it". The next time we hit this method, we don't have to hit the database again.
 
 Elixir, however, is a *functional* language where ruby is object-oriented. This means we don't have objects or a concept of state in elixir, which makes for an interesting dilemma when attempting to memoize this query. If elixir has no concept of state, then how do we solve this?
 
@@ -72,17 +72,17 @@ First we need to define a custom `Plug`:
 # web/plugs/assign_user.ex
 
 defmodule Jumper.AssignUser do
-	import Plug.Conn
+  import Plug.Conn
 
-	def init(_opts) do
-		nil
-	end
+  def init(_opts) do
+    nil
+  end
 
-	def call(conn, _opts) do
-		id = get_session(conn, :user_id)
-		current_user = id && Jumper.Repo.get(Jumper.User, id)
-		assign(conn, :current_user, current_user)
-	end
+  def call(conn, _opts) do
+    id = get_session(conn, :user_id)
+    current_user = id && Jumper.Repo.get(Jumper.User, id)
+    assign(conn, :current_user, current_user)
+  end
 end
 {% endhighlight %}
 
@@ -94,13 +94,13 @@ Let's add this plug to the end of our pipeline so we hit it during the request c
 # web/route.ex
 
 pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
-    plug Jumper.AssignUser
-  end
+  plug :accepts, ["html"]
+  plug :fetch_session
+  plug :fetch_flash
+  plug :protect_from_forgery
+  plug :put_secure_browser_headers
+  plug Jumper.AssignUser
+end
 {% endhighlight %}
 
 Next we need to modify `Session.logged_in?` to check the `assigns` value:
@@ -159,7 +159,7 @@ I don't like that every time I want to use the current user, I have to access it
 # web/models/session.ex
 
 def current_user(conn) do
-	conn.assigns[:current_user]
+  conn.assigns[:current_user]
 end
 {% endhighlight %}
 
