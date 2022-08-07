@@ -1,0 +1,188 @@
+---
+layout: post
+title: 'Rails and GraphQL Tutorial Part 2: Mutation Basics'
+date: 
+type: post
+parent_id: '0'
+published: false
+password: ''
+status: draft
+categories:
+- Ruby on Rails
+- Tutorials
+tags: []
+meta:
+  _wpcom_is_markdown: '1'
+  _edit_last: '1'
+author:
+  login: admin
+  email: mengledowl@gmail.com
+  display_name: Matt Engledowl
+  first_name: ''
+  last_name: ''
+permalink: "/"
+---
+<p>TODO: Add a table of contents here pointing back to part 1, no link on part 2, and the rest as they come out.</p>
+<p>Hi there, and welcome back to part 2 of our tutorial about using GraphQL in rails. {{Last time, we went over some of the basics about how to build and execute some simple queries}} TODO: add a link back to that here, including asking for relationships between pieces of data. Today, we're going to continue to work through some basic concepts by adding some mutations.</p>
+<h2>Part 1 Assignment Solution</h2>
+<p>Before we get to the content for part 2, here's the solution to the assignment from part 1.</p>
+<h3>Retrieving a List of Posts</h3>
+<p>In the first part of the assignment, you were asked to add a query field that would allow you to retrieve a list of all posts. The solution is pretty simple - all you needed to do was follow the same format we used for <code>users</code> and add the following few lines of code:</p>
+<pre># app/graphql/types/query_type.rb
+
+</pre>
+<pre>field :posts, [Types::PostType], 'Retrieve a list of all posts', null: true
+
+def posts
+  Post.all
+end</pre>
+<p>That's it!</p>
+<h3>Retrieving a Post by ID</h3>
+<p>If you took a stab at this one, it was a bit more complicated and would have required you to have done a bit of research to implement it - especially if you're not familiar with GraphQL or the gem! It involves accepting an <code>argument</code> and using that in your query, which isn't something we've gone over yet. Here's the solution for that:</p>
+<pre># app/graphql/types/query_type.rb
+
+</pre>
+<pre>field :post, Types::PostType, 'Retrieve a single post by ID', null: true do
+  argument :id, ID, 'The unique ID for the post to retrieve', required: true
+end
+
+def post(id:)
+  Post.find(id)
+end</pre>
+<p>Then you should be able to run a query and receive a post in response, like so:</p>
+<p><img class="alignnone size-large wp-image-463" src="{{ site.baseurl }}/assets/images/Screen-Shot-2018-06-23-at-4.07.40-PM-1024x665.png" alt="" width="700" height="455" /></p>
+<p>Don't worry if you don't understand everything that's happening here - one of the things we will be doing in this post is talking about arguments, so hopefully any questions you may have will be cleared up shortly!</p>
+<h2>Mutant Mutations</h2>
+<p>So, what exactly <em>is</em> a mutation?</p>
+<p>If you're not already familiar with GraphQL, the term might seem strange - foreign even - but the concept is actually really simple.<strong> I would define a mutation as an operation that has side-effects</strong>. This could include things like updating information in a database, sending a message, or the like.</p>
+<p>Where a query says to the server "I need information about X", a mutation says "please perform action Y".</p>
+<p>Generally in REST style applications, this would be a POST, PUT, or DELETE. Of course, with GraphQL we're really not concerned with headers - most servers just expect all queries to be a POST request. Instead, GraphQL allows us to express that in a very similar way to how we can express a Query field, and it feels a lot like a function.</p>
+<p>For now, we're going to create a couple of basic mutations, which we will build on later.</p>
+<p>Currently, the only thing we can do with our API is ask for details about users and posts. That's great, and it certainly allowed us to see how crazy powerful GraphQL can be for retrieving information in a graph-like manner, but those ice cream fanatics love to talk about ice cream almost as much as they love to eat it! What good does a social network centered around ice cream do them if no one can post anything?</p>
+<p>So, what is it that we need to be able to do? For right now we'll focus on two things:</p>
+<ul>
+<li>Creating a post</li>
+<li>Updating a post</li>
+</ul>
+<p>The first thing we'll need to do is pop open <code>app/graphql/types/mutation_type.rb</code>. Where last time we were putting things in the <code>QueryType</code>, this time it will be the <code>MutationType</code>. If you remember from the previous part of this series, a mutation is one of the three root fields/types. By adding fields to the <code>MutationType</code>, we're specifying that these are mutations and that they have side-effects.</p>
+<p>Right now, it just has some test code that we can remove. Replace the contents of the file with the following:</p>
+<pre># app/graphql/types/mutation_type.rb
+
+</pre>
+<pre>module Types
+  class MutationType &lt; BaseObject
+    graphql_name "Mutation"
+
+    field :post_create, Types::PostType, 'Creates a post based on the current user', null: false do
+      argument :body, String, 'The text content for the post', required: true
+    end
+
+    def post_create(body:)
+      Post.create(body: body, user: context[:current_user])
+    end
+  end
+end</pre>
+<p>Let's check out what's going on here before we move on.</p>
+<p>There's a lot here that we've already seen with the query types from part 1. We're already familiar with the <code>field</code> method, but this time we're passing it a block and calling <code>argument</code> - what's up with that?</p>
+<p>Well, GraphQL has a concept of "arguments". These are very much like arguments or "parameters" in method/function calls, allowing you to pass some extra information to the resolver that can help inform what the resolver does.</p>
+<p>The format of the <code>argument</code> method is very similar to that of the <code>field</code> method. The first parameter it expects is the name we're giving the argument, followed by the type that we expect the argument to be in and a description that tells what the purpose of the argument is.</p>
+<p>Then we get to a keyword argument that says <code>required: true</code>. This is very similar to <code>null</code> on a <code>field</code> and specifies whether or not the client is required to pass that argument in for the query to be valid. In this case, it doesn't make sense to attempt to create a post with no <code>body</code>, so we specify that it's required.</p>
+<p>I should note quickly that arguments can be used for any fields, whether it's for a mutation or not. For example, you might want to change the <code>users</code> query field to take an argument called <code>name</code> where you could perform a search based on the user's name.</p>
+<p>Next, we've got our resolver method, <code>post_create</code>. This is pretty much the same as well, except that it takes a keyword argument called <code>body</code>, and it creates a post rather than simply querying for something. As you may have already picked up on, the keyword argument is coming from the <code>argument</code> that we specified for our field above. When the gem attempts to run the resolver, it will pass in whatever arguments we specify in our <code>field</code> call, with the values provided by the client making the query. So if someone sent us a mutation with the body set to "I really want some ice cream right now", the gem would essentially do something like <code>mutation.post_create(body: "I really want some ice cream right now")</code>.</p>
+<p><strong>Protip: </strong>You probably noticed that I called this field <code>post_create</code> rather than <code>create_post</code> and might be thinking that I got it backwards. <em>This was actually intentional</em> and currently reflects a best practice. Why invert it though? It has everything to do with the popular tool (which we used in part 1) GraphiQL. When you look through the docs tab in GraphiQL, you will notice that it puts all the fields in alphabetical order. When it comes to mutations, there's no concept of namespaces or anything like that yet, so you end up having quite a few of them sometimes. After you've got a number of them, if you're naming them using a "verb_noun" format, it starts to get cumbersome scrolling through because the actions are grouped rather than the thing that the actions are being called on. So your order might be something like:</p>
+<ul>
+<li>createPost</li>
+<li>createUser</li>
+<li>deletePost</li>
+<li>deleteUser</li>
+<li>updatePost</li>
+<li>updateUser</li>
+</ul>
+<p>This may not look so bad now, but once you have several dozen mutations, it can really split things up so that it's hard to see what you can do to a given item. By inverting this, it groups like-mutations together:</p>
+<ul>
+<li>postCreate</li>
+<li>postDelete</li>
+<li>postUpdate</li>
+<li>userCreate</li>
+<li>userDelete</li>
+<li>userUpdate</li>
+</ul>
+<p>Hence the reasoning behind the somewhat strange inversion for the naming!</p>
+<h3>What Is "Context"?</h3>
+<p>Getting back to our explanation, you might have also noticed something else new about the resolve method: a reference to <code>context[:current_user]</code>. In GraphQL, almost everything is short-lived and tightly scoped to doing one small/specific thing; fields define a single "unit" of data, resolvers define what to do for that single unit of data (to retrieve it or perform the action). As a consequence, they don't tend to know much about things outside of themselves. The problem is, you need to be able to know about <em>some</em> things at least across different resolvers; for example, the currently logged in user.</p>
+<p>GraphQL's answer to this is known as the "context". This is an object that gets passed along to each resolver. In ruby, we specify this as a hash and pass it as an option to the <code>execute</code> method on our schema. So we actually need to make one more change in order to make this code work.</p>
+<p>If you open up <code>app/controllers/graphql_controller.rb</code>, you'll notice that there's a <code>context</code> variable that gets set and then passed into your schema inside the <code>execute</code> method. Right now, it's got a single, commented out line referring to the <code>current_user</code>:</p>
+<pre>context = {
+  # Query context goes here, for example:
+  # current_user: current_user,
+}</pre>
+<p>Of course, we haven't implemented any kind of authentication, so we don't really have a <code>current_user</code> to grab. We're going to talk about auth concerns eventually, but for now we're just trying to see the basics. Let's change this to just grab a user, say <code>User.first</code>. Your <code>execute</code> method in <code>GraphqlController</code> should now look like this:</p>
+<pre>def execute
+  variables = ensure_hash(params[:variables])
+  query = params[:query]
+  operation_name = params[:operationName]
+  context = {
+    current_user: User.first
+  }
+  result = IcecreamCrazeSchema.execute(query, variables: variables, context: context, operation_name: operation_name)
+  render json: result
+end</pre>
+<p>We can access the values in the context within our resolvers by using the <code>context</code> helper method - this simply returns the hash specified above to us, so that when we ask for <code>context[:current_user]</code> in our resolver above, it should return the result of <code>User.first</code>.</p>
+<p>Now let's give it a whirl. Pull up GraphiQL and refresh it. You should now be able to drill down into the <code>Mutation</code> type and see our newly created mutation:</p>
+<p><img class="alignnone size-full wp-image-449" src="{{ site.baseurl }}/assets/images/Screen-Shot-2018-06-16-at-2.26.15-PM.png" alt="" width="698" height="502" /></p>
+<p>Notice that this time, we also are given some documentation about the arguments that the field takes (in this case, just the <code>body</code> which it expects to be a <code>String</code> and must be present, which is denoted by the <code>!</code>). If you drill down into the mutation by clicking on <code>postCreate</code> you can see more details and see the documentation we wrote for the body argument:</p>
+<p><img class="alignnone size-full wp-image-451" src="{{ site.baseurl }}/assets/images/Screen-Shot-2018-06-16-at-2.35.14-PM.png" alt="" width="696" height="636" /></p>
+<p>Great! Now... how do we use it exactly?</p>
+<h2>Submitting Your First Mutation</h2>
+<p>The way that we use mutations ends up being <em>very similar</em> to how you write queries, with a couple of minor differences. Here's what the mutation will look like:</p>
+<pre>mutation {
+  postCreate(body: "My first post!") {
+    id
+    body
+    author {
+      firstName
+      lastName
+    }
+  }
+}</pre>
+<p>The first thing you might notice is that this time, we have the word "mutation" before our opening curly brace. This signals that we are attempting to submit a mutation. When submitting a query, it is fairly common to simply open the brace without a word in front - this is possible because GraphQL assumes that if you don't specify which root field you're jumping into, then you are attempting to submit a query. As a result, we have to put "mutation" here or else GraphQL won't know that we're submitting a mutation!</p>
+<p>Next we call into our mutation which we called <code>postCreate</code> and pass it the <code>body</code> argument. I should pause here to explain that in GraphQL, <strong>all arguments are named arguments.</strong></p>
+<p>What this means is that rather than passing arguments based on position (eg. where first argument is the <code>body</code>, second is the <code>user</code>, etc), you instead give <em>the name of the argument, followed by a colon, and then the value</em>. In ruby, we call these keyword arguments. This is great, especially for GraphQL because it makes our queries much more readable and you don't have to worry about remembering order, explicitly passing in <code>null</code> when you want to skip an argument, etc.</p>
+<p>The argument that we passed into <code>postCreate</code> is what will be passed to the <code>post_create</code> resolve method that we defined in our <code>MutationType</code> earlier. It then executes the create method, which returns a <code>Post</code>, which gets coerced into a <code>PostType</code>. Then, back in our query, we are able to ask for the information from the result of creating that Post, just the same as when we directly queried for a post off of a user. So not only are we submitting the mutation, but we're also able to get information about the Post we just made!</p>
+<p>Executing the mutation should yield something like this:</p>
+<p><img class="alignnone size-large wp-image-450" src="{{ site.baseurl }}/assets/images/Screen-Shot-2018-06-16-at-2.34.58-PM-1024x652.png" alt="" width="700" height="446" /></p>
+<p>Go ahead and play around with this - try submitting a query with no <code>body</code>, changing which details you ask to have returned to you, or submitting some queries to see if you can see the post you just created in the list.</p>
+<h2>Multiple Mutations (...and Queries!)</h2>
+<p>I think it's important to take the time to describe the behavior of a GraphQL server when submitting multiple mutations/queries at once.</p>
+<p>The syntax for doing this looks very similar. Here's how you would submit two mutations in a single request:</p>
+<pre>mutation {
+  first: postCreate(body: "My first post!") {
+    id
+    body
+    author {
+      firstName
+      lastName
+    }
+  }
+  second: postCreate(body: "My second post!") {
+    id
+    body
+  }
+}</pre>
+<p>You'll notice I'm saying <code>first:</code> and <code>second:</code> before each mutation - if you've never seen this before, these are just aliases and they are required if you're doing multiple mutations on the same field as we are here so that the response can key each accordingly.</p>
+<p>Queries are much the same:</p>
+<pre>{
+  users {
+    id
+    firstName
+    lastName
+  }
+  iceCreamFavorites: users {
+    favoriteIceCreamFlavor
+  }
+}</pre>
+<p>Each of these would result in attempting to execute all queries in the operation, but there is a distinct difference. In the case of the query, since all these do is retrieve data, the queries will be executed concurrently. However - and this is important and significant - in the case of the mutations, they will be executed serially, or one after another. You can't depend on the order in which the queries execute, but you can expect that mutations will be executed in the order that they appear in the document. If you're interested in what the spec has to say about this, you may find <a href="https://graphqlme.com/2018/06/16/does-the-graphql-spec-contradict-itself/">this post</a> where I answered a question related to this interesting.</p>
+<h2>Assignment</h2>
+<p>In this section of the tutorial, you've learned how to add a mutation to your schema which takes an argument, and submit that mutation (or many at once). You also learned about the <code>context</code> in GraphQL and how to store and access things within the context.</p>
+<p>For your assignment before the next part, <strong>implement a second mutation that allows the API user to update the current user's details</strong>. You will need to accept multiple arguments for this mutation, as there are several different fields on a user which one could reasonably want to update. Give it a shot and in part 3 we'll go over my implementation and expand on it.</p>
+<p>Good luck, and don't forget that <a href="https://github.com/mengledowl/icecream-craze">all of the source code for this tutorial is available on GitHub</a> if you get stuck! (here's the link to the code for this branch) TODO: ADD LINK TO THE BRANCH FOR PART 2</p>

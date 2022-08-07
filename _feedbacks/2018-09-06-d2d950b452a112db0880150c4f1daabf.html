@@ -1,0 +1,109 @@
+---
+layout: feedback
+title: 谢超 - 2018-09-06 14:40:49
+date: 2018-09-06 14:40:49.000000000 -05:00
+type: feedback
+parent_id: '18'
+published: true
+password: ''
+status: publish
+categories: []
+tags: []
+meta:
+  _feedback_extra_fields: a:0:{}
+  _feedback_email: "a:2:{s:2:\"to\";a:1:{i:0;s:35:\"\"mengledowl\" <mengledowl@gmail.com>\";}s:7:\"message\";s:1788:\"<!doctype
+    html>\n<html xmlns=\"http://www.w3.org/1999/xhtml\">\n<body>\n\n<b>Name:</b> 谢超<br
+    /><br /><b>Email:</b> xiechao06@gmail.com<br /><br /><b>Message:</b> Hi, thanks
+    for all your blogs, they do teach me a lot, in my current project, I adopt your
+    way of handling errors, and it works for me most of the time.  https://graphqlme.com/2018/03/17/i-thought-of-a-better-way-to-handle-errors/.<br
+    />\r\n<br />\r\n But I think it does not cope with validation error (for example,
+    json web token expired) so well,  becuase:<br />\r\n<br />\r\n1. expiration should
+    be handled out of business logic in client, namely, if you go expired, login again,
+    don't handle the business anymore<br />\r\n2.  it is stupid to issue query like:
+    <br />\r\n<br />\r\n{<br />\r\n    getA(...) {...}<br />\r\n    getB(...) {...}<br
+    />\r\n}<br />\r\n<br />\r\nand get results like: <br />\r\n<br />\r\n{<br />\r\n
+    \  data: {<br />\r\n        getA {<br />\r\n             error: { code: 'TOKEN_EXPIRED'
+    }<br />\r\n        },<br />\r\n       getB  {<br />\r\n             error: { code:
+    'TOKEN_EXPIRED' }<br />\r\n        }<br />\r\n   }<br />\r\n} <br />\r\n<br />\r\nso
+    I suggest that this particular kind of error should be put at the top  level,
+    like:<br />\r\n<br />\r\n {<br />\r\n     error: {<br />\r\n           errors:
+    {<br />\r\n                [code: 'TOKEN_EXPIRED']<br />\r\n           }<br />\r\n
+    \    }<br />\r\n}<br />\r\n<br />\r\nbut this way, it will mess with the type
+    system error, as in your blog \"https://graphqlme.com/2017/12/31/stop-fighting-the-type-system/\".
+    I wish you could give me a better way to handle this kind of error, thanks very
+    much!<br /><br /><br /><hr />Time: September 6, 2018 at 2:40 pm<br />IP Address:
+    101.69.244.238<br />Contact Form URL: https://graphqlme.com/about/<br /><p>Sent
+    by an unverified visitor to your site.</p>\n\n</body>\n</html>\";}"
+author: 
+permalink: "/"
+---
+<p>Hi, thanks for all your blogs, they do teach me a lot, in my current project, I adopt your way of handling errors, and it works for me most of the time.  https://graphqlme.com/2018/03/17/i-thought-of-a-better-way-to-handle-errors/.</p>
+<p> But I think it does not cope with validation error (for example, json web token expired) so well,  becuase:</p>
+<p>1. expiration should be handled out of business logic in client, namely, if you go expired, login again, don't handle the business anymore<br />
+2.  it is stupid to issue query like: </p>
+<p>{<br />
+    getA(...) {...}<br />
+    getB(...) {...}<br />
+}</p>
+<p>and get results like: </p>
+<p>{<br />
+   data: {<br />
+        getA {<br />
+             error: { code: 'TOKEN_EXPIRED' }<br />
+        },<br />
+       getB  {<br />
+             error: { code: 'TOKEN_EXPIRED' }<br />
+        }<br />
+   }<br />
+} </p>
+<p>so I suggest that this particular kind of error should be put at the top  level, like:</p>
+<p> {<br />
+     error: {<br />
+           errors: {<br />
+                [code: 'TOKEN_EXPIRED']<br />
+           }<br />
+     }<br />
+}</p>
+<p>but this way, it will mess with the type system error, as in your blog "https://graphqlme.com/2017/12/31/stop-fighting-the-type-system/". I wish you could give me a better way to handle this kind of error, thanks very much!<br />
+<!--more--><br />
+AUTHOR: 谢超<br />
+AUTHOR EMAIL: xiechao06@gmail.com<br />
+AUTHOR URL:<br />
+SUBJECT: GraphQL Guru Contact Form Message<br />
+IP: 101.69.244.238<br />
+Array<br />
+(<br />
+    [1_Name] =&gt; 谢超<br />
+    [2_Email] =&gt; xiechao06@gmail.com<br />
+    [3_Message] =&gt; Hi, thanks for all your blogs, they do teach me a lot, in my current project, I adopt your way of handling errors, and it works for me most of the time.  https://graphqlme.com/2018/03/17/i-thought-of-a-better-way-to-handle-errors/.</p>
+<p> But I think it does not cope with validation error (for example, json web token expired) so well,  becuase:</p>
+<p>1. expiration should be handled out of business logic in client, namely, if you go expired, login again, don't handle the business anymore<br />
+2.  it is stupid to issue query like: </p>
+<p>{<br />
+    getA(...) {...}<br />
+    getB(...) {...}<br />
+}</p>
+<p>and get results like: </p>
+<p>{<br />
+   data: {<br />
+        getA {<br />
+             error: { code: 'TOKEN_EXPIRED' }<br />
+        },<br />
+       getB  {<br />
+             error: { code: 'TOKEN_EXPIRED' }<br />
+        }<br />
+   }<br />
+} </p>
+<p>so I suggest that this particular kind of error should be put at the top  level, like:</p>
+<p> {<br />
+     error: {<br />
+           errors: {<br />
+                [code: 'TOKEN_EXPIRED']<br />
+           }<br />
+     }<br />
+}</p>
+<p>but this way, it will mess with the type system error, as in your blog "https://graphqlme.com/2017/12/31/stop-fighting-the-type-system/". I wish you could give me a better way to handle this kind of error, thanks very much!<br />
+    [entry_title] =&gt; About<br />
+    [entry_permalink] =&gt; https://graphqlme.com/about/<br />
+    [feedback_id] =&gt; d2d950b452a112db0880150c4f1daabf<br />
+)</p>
