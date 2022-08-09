@@ -35,7 +35,7 @@ Errors are a hot topic right now in GraphQL. One of the most common questions I 
 
 **This comes with a caveat** : as the notes from the working group meeting indicate, there are lots of different needs when it comes to errors. What works for one company may not necessarily work well for another. With that being said, I want to share a formula that I think makes _the most sense for a large majority of use-cases_ from both a flexibility and simplicity perspective.
 
-One more thing that I should add: the kind of errors that I'm going to be talking about here are those related to _validation errors occurring during a mutation_ - eg. “email already taken”, etc. There are [other types of errors](https://graphqlme.com/2017/12/31/stop-fighting-the-type-system/) that I don't plan to address (type errors which are handled automatically, and application errors, for example).
+One more thing that I should add: the kind of errors that I'm going to be talking about here are those related to _validation errors occurring during a mutation_ - eg. “email already taken”, etc. There are [other types of errors](/2017/12/31/stop-fighting-the-type-system/) that I don't plan to address (type errors which are handled automatically, and application errors, for example).
 
 ## An Example
 
@@ -205,5 +205,5 @@ This will likely bother some people a lot more than it bothers me.
 
 As I said before, this probably won't work for all use-cases, but I think it does a pretty good job covering most people's needs. I will be keeping a close eye on what comes out of the working group discussions about errors to see what they come up with. Personally, I think we need a best practice here and not any kind of change to the spec, as this seems a bit too use-case specific. Time will tell. Until then, I think that this is a great solution, and I hope you've found it helpful!
 
-**_UPDATE 03-17-2018:_** _There is [now a "part 2" of this post](https://graphqlme.com/2018/03/17/i-thought-of-a-better-way-to-handle-errors/), so-to-speak where I show why this solution is still not quite right and present a couple of solutions that I think address the problem with this approach. The solution outlined there should be used over this one._
+**_UPDATE 03-17-2018:_** _There is [now a "part 2" of this post](/2018/03/17/i-thought-of-a-better-way-to-handle-errors/), so-to-speak where I show why this solution is still not quite right and present a couple of solutions that I think address the problem with this approach. The solution outlined there should be used over this one._
 

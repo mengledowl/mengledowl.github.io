@@ -63,7 +63,7 @@ No revolution starts out with a mob of people - it starts out when one person ta
 
 ### **Address People's Fears Outright**
 
-People are going to have concerns. There is a lot of hype out there, and no one wants to be caught holding the stick when the dust settles and things didn’t go how they thought they would. This can be one of the greatest barriers that you will face when attempting to enact change on your organization and get them to adopt something new. Don’t shy away from the fears people have - face them head-on; bring them up before other people have a chance, if you can. Read over [the fears](https://graphqlme.com/2017/09/09/are-you-afraid/) that tend to [hold people back](https://graphqlme.com/2017/10/28/fud-facebook-and-graphql/) from adopting GraphQL and have an answer ready, even if it amounts to “this isn’t a solved problem yet, but there are a lot of powerful forces propelling the GraphQL community towards an answer”.
+People are going to have concerns. There is a lot of hype out there, and no one wants to be caught holding the stick when the dust settles and things didn’t go how they thought they would. This can be one of the greatest barriers that you will face when attempting to enact change on your organization and get them to adopt something new. Don’t shy away from the fears people have - face them head-on; bring them up before other people have a chance, if you can. Read over [the fears](/2017/09/09/are-you-afraid/) that tend to [hold people back](/2017/10/28/fud-facebook-and-graphql/) from adopting GraphQL and have an answer ready, even if it amounts to “this isn’t a solved problem yet, but there are a lot of powerful forces propelling the GraphQL community towards an answer”.
 
 ### **Be A Supporter, Not A Savior**
 

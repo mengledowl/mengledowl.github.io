@@ -21,7 +21,7 @@ permalink: "/2018/04/15/with-great-power/"
 
 These words are often quoted in reference to some situation where a person in power could easily cause severe consequences by misusing their power. So how does this relate to GraphQL?
 
-It's amazing the kind of power that you can coax out of GraphQL. The [benefits](https://graphqlme.com/2017/12/17/benefits-of-graphql-on-the-backend/) are quite impressive and [extensive](https://graphqlme.com/2017/10/15/5-things-love-graphql/), and the [type system](https://graphqlme.com/2017/12/31/stop-fighting-the-type-system/) alone can work wonders for your API.
+It's amazing the kind of power that you can coax out of GraphQL. The [benefits](/2017/12/17/benefits-of-graphql-on-the-backend/) are quite impressive and [extensive](/2017/10/15/5-things-love-graphql/), and the [type system](/2017/12/31/stop-fighting-the-type-system/) alone can work wonders for your API.
 
 The way that GraphQL exposes your data as a graph makes it easy to navigate that data, and especially if you have an ORM on the back-end that is powering your data and relationships from that front, it can be tempting to try to build something that can automatically build your GraphQL API based on that ORM or your underlying data access modules.
 
@@ -81,7 +81,7 @@ Perhaps, but this also&nbsp;poses several problems:
 
 1. It's easy to over-expose queries/mutations
 2. It exposes all fields, relationships, and classes/types by default
-3. It tightly couples your GraphQL schema to your underlying data model, [which should not always match each other](https://graphqlme.com/2018/04/07/schema-design/)
+3. It tightly couples your GraphQL schema to your underlying data model, [which should not always match each other](/2018/04/07/schema-design/)
 
 The first two are really essentially the same problem, which is that **it's easy to accidentally expose more than you meant to**.
 

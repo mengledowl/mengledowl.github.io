@@ -20,7 +20,7 @@ meta:
 author: Matt Engledowl
 permalink: "/2017/10/28/fud-facebook-and-graphql/"
 ---
-A while back, I wrote about [a few different fears](https://graphqlme.com/2017/09/09/are-you-afraid/) that I think hold some people back from using GraphQL.
+A while back, I wrote about [a few different fears](/2017/09/09/are-you-afraid/) that I think hold some people back from using GraphQL.
 
 Apparently I missed one.
 

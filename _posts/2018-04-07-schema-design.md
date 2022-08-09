@@ -23,7 +23,7 @@ permalink: "/2018/04/07/schema-design/"
 
 There are a few different ways that I've seen newcomers to GraphQL attempt to approach GraphQL schema design that are sub-optimal:
 
-1. Using "endpoint style" rather than [thinking in graphs](https://graphqlme.com/2017/11/11/build-better-graphql-apis-thinking-in-graphs/)
+1. Using "endpoint style" rather than [thinking in graphs](/2017/11/11/build-better-graphql-apis-thinking-in-graphs/)
 2. Mapping their GraphQL schema directly to their database tables (foreign keys and all)
 3. Mapping their GraphQL schema directly to their back-end data model (eg. your model classes from your ORM or the like)
 

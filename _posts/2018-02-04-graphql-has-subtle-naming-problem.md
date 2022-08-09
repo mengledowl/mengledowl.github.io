@@ -55,7 +55,7 @@ If you've spent much time working with GraphQL, you've at least heard of it. In 
 - Global IDs
 - Mutation structure
 
-The way that relay handles these things are based on sound principles and ideas. For example, pagination is done via “cursor-based” pagination - commonly referred to as “[connections](https://graphqlme.com/2017/09/24/graphql-connections-rails/)”. The GraphQL community has rallied around many of these concepts and adopted them as best practices for how you should do things in GraphQL. The problem is that when referring to these concepts, particularly within different language implementations, they are named after relay rather than after the underlying core concept.
+The way that relay handles these things are based on sound principles and ideas. For example, pagination is done via “cursor-based” pagination - commonly referred to as “[connections](/2017/09/24/graphql-connections-rails/)”. The GraphQL community has rallied around many of these concepts and adopted them as best practices for how you should do things in GraphQL. The problem is that when referring to these concepts, particularly within different language implementations, they are named after relay rather than after the underlying core concept.
 
 So for example, a connection isn't just called “Connection” or “CursorPagination” or something like that. Instead, the code tends to reference relay directly, by namespacing it under `Relay`&nbsp;or some other form or fashion. Even when "relay" isn't referenced directly in the code, often any mention of connections in the documentation will be accompanied by the word relay - something like "In relay, pagination is handled using connections..."
 
@@ -69,5 +69,5 @@ I get it. I understand why it happened this way. These concepts were introduced 
 
 It's important to name things well, and naming is one of the hardest parts of what we do. Let's continue to improve on that, and start with disassociating relay with concepts that can be used without relay in GraphQL by being more intentional with our naming. After all, it's not just users of relay who can benefit from cursor-based pagination, but anyone who needs to paginate!
 
-There may be a good reason to keep the close association that I haven't thought of it yet - if you disagree with me, I'm more than happy to discuss! Drop thoughts in the comments section, shoot me a message from the [about page](https://graphqlme.com/about/), or come hit me up in the GraphQL slack! (I'm @mengledowl and I don't bite!)
+There may be a good reason to keep the close association that I haven't thought of it yet - if you disagree with me, I'm more than happy to discuss! Drop thoughts in the comments section, shoot me a message from the [about page](/about/), or come hit me up in the GraphQL slack! (I'm @mengledowl and I don't bite!)
 

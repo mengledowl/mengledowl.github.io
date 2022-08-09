@@ -18,7 +18,7 @@ meta:
 author: Matt Engledowl
 permalink: "/2018/03/17/i-thought-of-a-better-way-to-handle-errors/"
 ---
-A few weeks ago I wrote about [handling errors in GraphQL](https://graphqlme.com/2018/02/24/handling-errors-in-graphql/). Shortly thereafter, I realized that I needed to post an update because I discovered both a flaw with the existing way of doing it and a better solution.
+A few weeks ago I wrote about [handling errors in GraphQL](/2018/02/24/handling-errors-in-graphql/). Shortly thereafter, I realized that I needed to post an update because I discovered both a flaw with the existing way of doing it and a better solution.
 
 ## Where We Left Off
 

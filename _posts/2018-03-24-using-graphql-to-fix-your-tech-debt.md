@@ -24,7 +24,7 @@ Technical debt or "tech debt" is a hot topic these days. If you've been in tech 
 
 In the fast-paced and changing world of business and technology, there is no escape from it if you want your company to survive. Even if you&nbsp;_mostly_ avoid it, at some point you'll have to move quickly to get something out the door or make an architectural/coding decision without all of the facts in front of you, and the result is still that you have some level of tech debt.
 
-There are lots of tools for managing this - from design principles and coding patterns to bug trackers to dedicated time for reducing tech debt, and so on. I would like to propose that **GraphQL can be an effective tool for cleaning up tech debt** without creating a bigger mess. If you read my post about [sprawling architecture](https://graphqlme.com/2018/02/17/how-graphql-solves-the-problem-of-sprawling-architecture-for-the-enterprise/), I actually briefly mentioned this, and would like to expand on it some here.
+There are lots of tools for managing this - from design principles and coding patterns to bug trackers to dedicated time for reducing tech debt, and so on. I would like to propose that **GraphQL can be an effective tool for cleaning up tech debt** without creating a bigger mess. If you read my post about [sprawling architecture](/2018/02/17/how-graphql-solves-the-problem-of-sprawling-architecture-for-the-enterprise/), I actually briefly mentioned this, and would like to expand on it some here.
 
 ## How So?
 

@@ -126,7 +126,7 @@ connection :usersConnection, Types::UserType.connection_type do
 end
 ```
 
-If you read my blog post outlining [how connections work in the ruby gem](https://graphqlme.com/2017/09/24/graphql-connections-rails/), you know that the `resolve`&nbsp;function should return something that can be lazily-loaded so that it can add the pagination functionality (if not, you should definitely give it a read before continuing as an understanding of connections is pretty important for this piece to make sense). This presents a problem for us, because if we do something like this:
+If you read my blog post outlining [how connections work in the ruby gem](/2017/09/24/graphql-connections-rails/), you know that the `resolve`&nbsp;function should return something that can be lazily-loaded so that it can add the pagination functionality (if not, you should definitely give it a read before continuing as an understanding of connections is pretty important for this piece to make sense). This presents a problem for us, because if we do something like this:
 
 ```
 User.all.map { |u| UserPresenter.new(u) }

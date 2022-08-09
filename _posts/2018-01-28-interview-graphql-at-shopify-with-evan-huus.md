@@ -31,7 +31,7 @@ I'm back with another interview, and this time I got an opportunity to sit down 
 
 Check out the video, and the full transcription, below!
 
-(In case you missed it, last time I [interviewed Robert Mosolgo](https://graphqlme.com/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/), creator of the graphql-ruby gem, and you should definitely check it out too!)
+(In case you missed it, last time I [interviewed Robert Mosolgo](/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/), creator of the graphql-ruby gem, and you should definitely check it out too!)
 
 Direct link to video:&nbsp;[https://www.youtube.com/watch?v=kx27KM7ad6o](https://www.youtube.com/watch?v=kx27KM7ad6o)
 
@@ -43,7 +43,7 @@ graphql-ruby gem: [https://github.com/rmosolgo/graphql-ruby](https://github.com/
 
 ### Full Transcription
 
-**Matt** : Hey everyone! Matt Engledowl here with GraphQLMe.com. I’ve got another interview for you all today. Last time we were [talking with Robert Mosolgo](https://graphqlme.com/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/), who is the creator of the GraphQL-Ruby Gem. He also works at GitHub on their GraphQL API. If you haven’t watched that video yet, you should definitely go check it out. I thought it went really well. I really enjoyed that. I’ll probably leave a link somewhere to that so you can go check it out.
+**Matt** : Hey everyone! Matt Engledowl here with GraphQLMe.com. I’ve got another interview for you all today. Last time we were [talking with Robert Mosolgo](/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/), who is the creator of the GraphQL-Ruby Gem. He also works at GitHub on their GraphQL API. If you haven’t watched that video yet, you should definitely go check it out. I thought it went really well. I really enjoyed that. I’ll probably leave a link somewhere to that so you can go check it out.
 
 Today, like I said, I’ve got another one for you. Today we have Evan Huus from Shopify. He works on their GraphQL API. I don’t want to say too much, because he’s going to kind of give an introduction to himself. Welcome, Evan, and thank you for agreeing to do this.
 

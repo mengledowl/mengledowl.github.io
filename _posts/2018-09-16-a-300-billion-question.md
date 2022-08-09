@@ -20,7 +20,7 @@ permalink: "/2018/09/16/a-300-billion-question/"
 ---
 ![]({{ site.baseurl }}/assets/images/2018/09/pepi-stojanovski-509192-unsplash-1024x640.jpg)
 
-Earlier this week, I was at API World in San Jose to give a talk about [how GraphQL can help solve the problem of enterprise sprawl](http://sched.co/FO9H), based somewhat loosely on [this blog post](https://graphqlme.com/2018/02/17/how-graphql-solves-the-problem-of-sprawling-architecture-for-the-enterprise/) from a while back. It was a really great experience and I loved getting the opportunity to share my thoughts on the subject through a different medium than my blog - I found out that speaking can be really fun!
+Earlier this week, I was at API World in San Jose to give a talk about [how GraphQL can help solve the problem of enterprise sprawl](http://sched.co/FO9H), based somewhat loosely on [this blog post](/2018/02/17/how-graphql-solves-the-problem-of-sprawling-architecture-for-the-enterprise/) from a while back. It was a really great experience and I loved getting the opportunity to share my thoughts on the subject through a different medium than my blog - I found out that speaking can be really fun!
 
 My favorite part was that I got lots of really great questions from people afterwards. It's so much fun to hear the ideas people have and be able to help them come to a better understanding of how GraphQL works!
 

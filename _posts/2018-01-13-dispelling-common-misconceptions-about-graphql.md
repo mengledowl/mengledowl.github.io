@@ -61,14 +61,14 @@ Isn't that just so much simpler than SQL?
 
 The best argument I have against this is the amount of large companies who have been using GraphQL in production successfully without any scale problems. To start off with, GraphQL came from Facebook. In fact, by the time they announced GraphQL, they had been using it in production for the native apps and the web app for several years. I don't think that Facebook would be using a technology that can't scale. Here are just a few other large companies using GraphQL in production:
 
-- GitHub (if you're interested in what they're doing, I [interviewed Robert Mosolgo](https://graphqlme.com/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/) of GitHub about GraphQL at GitHub)
+- GitHub (if you're interested in what they're doing, I [interviewed Robert Mosolgo](/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/) of GitHub about GraphQL at GitHub)
 - IBM
 - Shopify
 - Pintrest
 - Twitter
 - Yelp
 
-That being said, there are some different issues that you may encounter than what you would see in REST such as increased difficulty in [mitigating N+1 queries](https://graphqlme.com/2017/12/09/n1-queries-no-more/), but these are solved problems.
+That being said, there are some different issues that you may encounter than what you would see in REST such as increased difficulty in [mitigating N+1 queries](/2017/12/09/n1-queries-no-more/), but these are solved problems.
 
 ## Misconception #4: GraphQL is just hype
 

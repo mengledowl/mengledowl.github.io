@@ -20,7 +20,7 @@ permalink: "/2018/03/10/when-not-to-use-graphql/"
 ---
 ![]({{ site.baseurl }}/assets/images/2018/03/3546059144_64e632801c.jpg)
 
-I spend a lot of time talking about the vast [benefits of using GraphQL](https://graphqlme.com/2017/10/15/5-things-love-graphql/)&nbsp;for your API. I believe that it's a solid technology that works for most use-cases when it comes to web APIs, and likely a lot of other applications as well (such as server-to-server communication). However, I would be remiss if I failed to point out that there are times when it might not make sense to use GraphQL for certain situations.
+I spend a lot of time talking about the vast [benefits of using GraphQL](/2017/10/15/5-things-love-graphql/)&nbsp;for your API. I believe that it's a solid technology that works for most use-cases when it comes to web APIs, and likely a lot of other applications as well (such as server-to-server communication). However, I would be remiss if I failed to point out that there are times when it might not make sense to use GraphQL for certain situations.
 
 ## Short-lived/Small Projects
 
@@ -36,7 +36,7 @@ In the end, using GraphQL for this would have added additional time and complexi
 
 ## File Uploads
 
-Most websites need to allow users to upload files at some point. In fact, it's one of the earliest things I ran into with GraphQL when I started doing it - how&nbsp;_does_ one upload files using GraphQL? Now, I should say that this is certainly possible. In fact, I've [written about how to do it](https://graphqlme.com/2017/09/16/upload-images-to-s3-in-graphql-using-rails-and-paperclip/) and it's one of my most popular blog posts to date. For the scenario I dealt with there, it makes sense up to a certain point. For those that haven't read it, the basic idea is that if you want to upload images, you can base64 the image on the client and then perform a mutation passing in the base64 as a string and then you're done. For simple use-cases like that where you're not likely to have very large images/files that you're dealing with, this is probably fine.
+Most websites need to allow users to upload files at some point. In fact, it's one of the earliest things I ran into with GraphQL when I started doing it - how&nbsp;_does_ one upload files using GraphQL? Now, I should say that this is certainly possible. In fact, I've [written about how to do it](/2017/09/16/upload-images-to-s3-in-graphql-using-rails-and-paperclip/) and it's one of my most popular blog posts to date. For the scenario I dealt with there, it makes sense up to a certain point. For those that haven't read it, the basic idea is that if you want to upload images, you can base64 the image on the client and then perform a mutation passing in the base64 as a string and then you're done. For simple use-cases like that where you're not likely to have very large images/files that you're dealing with, this is probably fine.
 
 Where that approach starts to break down is when you start dealing with medium to large files. Past a certain threshold, the process of base64 encoding a file becomes quite intensive and time-consuming, and then you still have to dump the string into a payload that goes to the server where it gets processed and possibly decoded (depending on what you need to do with the file). This can take a lot of extra time over doing a simple multi-part upload. It's probably best to stick with that for those types of situations, although I'd be very interested to hear others thoughts on this.
 

@@ -318,7 +318,7 @@ Now we can run a query to get a list of these:
 }
 ```
 
-Pretty quick and easy, huh? At this point you might be wondering about pagination, maybe using some arguments that you can pass into `posts` to get a subset of the results. I'm not going to delve into it here, but the best practices way to do this in GraphQL is using a concept called `connections` which graphql-ruby has first-class support for. If you're interested, [check out the documentation](http://graphql-ruby.org/relay/connections.html)! Note that you can safely ignore the fact that it talks about Relay here - Relay is not required in order to implement connections.&nbsp;_(UPDATE: I have written a tutorial going through how to do this&nbsp;[here](https://graphqlme.com/2017/09/24/graphql-connections-rails/))_
+Pretty quick and easy, huh? At this point you might be wondering about pagination, maybe using some arguments that you can pass into `posts` to get a subset of the results. I'm not going to delve into it here, but the best practices way to do this in GraphQL is using a concept called `connections` which graphql-ruby has first-class support for. If you're interested, [check out the documentation](http://graphql-ruby.org/relay/connections.html)! Note that you can safely ignore the fact that it talks about Relay here - Relay is not required in order to implement connections.&nbsp;_(UPDATE: I have written a tutorial going through how to do this&nbsp;[here](/2017/09/24/graphql-connections-rails/))_
 
 ### Plugging In Users And Comments
 

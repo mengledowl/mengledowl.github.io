@@ -73,7 +73,7 @@ When I saw that GraphQL had named arguments&nbsp;_only_, I leapt for joy. This m
 
 ### No One Likes Long Arguments
 
-There can still be a bit of pain here though. Let's imagine you have a mutation for a `UserType`&nbsp;in GraphQL for you to update your user. Let's start out with an example that builds off of my tutorial for [building a GraphQL API in rails](https://graphqlme.com/2017/09/04/building-a-graphql-api-in-rails/)&nbsp;(plus a couple extras that I've added in for the sake of this example):
+There can still be a bit of pain here though. Let's imagine you have a mutation for a `UserType`&nbsp;in GraphQL for you to update your user. Let's start out with an example that builds off of my tutorial for [building a GraphQL API in rails](/2017/09/04/building-a-graphql-api-in-rails/)&nbsp;(plus a couple extras that I've added in for the sake of this example):
 
 ```
 # graphql/types/user_type.rb
@@ -136,7 +136,7 @@ mutation {
 }
 ```
 
-That's a decent amount of arguments, and it's not far-fetched to picture this user model growing to have many more arguments on it than this. We could dump these in the variables, but all that does is move the values, add more boilerplate, and really just make it even grosser. There's also another issue to consider with this: what happens if we want to add a `createUser`&nbsp;mutation? We'd have to duplicate this whole thing! We could [use functions](https://graphqlme.com/2017/10/07/clean-up-schema-resolvers-functions/)&nbsp;to do this too, but it's still not quite right.
+That's a decent amount of arguments, and it's not far-fetched to picture this user model growing to have many more arguments on it than this. We could dump these in the variables, but all that does is move the values, add more boilerplate, and really just make it even grosser. There's also another issue to consider with this: what happens if we want to add a `createUser`&nbsp;mutation? We'd have to duplicate this whole thing! We could [use functions](/2017/10/07/clean-up-schema-resolvers-functions/)&nbsp;to do this too, but it's still not quite right.
 
 So what's the solution?
 

@@ -27,7 +27,7 @@ Once you've been doing GraphQL for a while, you might start to notice that you h
 
 Sticking your hand in this pile is _not_ recommended.
 
-Let's imagine you have a resolver that is doing a lot of different things. Perhaps it's handling filtering, searching, and maybe a handful of other things on your `users`&nbsp;set. Maybe a [connection](https://graphqlme.com/2017/09/24/graphql-connections-rails/) - something like this:
+Let's imagine you have a resolver that is doing a lot of different things. Perhaps it's handling filtering, searching, and maybe a handful of other things on your `users`&nbsp;set. Maybe a [connection](/2017/09/24/graphql-connections-rails/) - something like this:
 
 ```
 connection :allUsersConnection, Types::UserType.connection_type do
@@ -67,7 +67,7 @@ True, but **I prefer to think of the resolve function as a _hook_ into the busin
 
 ### Using The Resolver Pattern
 
-As I mentioned in my post on [building a GraphQL API in rails](https://graphqlme.com/2017/09/04/building-a-graphql-api-in-rails/), the `resolve`&nbsp;function takes a proc. A proc, behind the scenes, is just an object that has the `call`&nbsp;method called on it. You can think of it like this:
+As I mentioned in my post on [building a GraphQL API in rails](/2017/09/04/building-a-graphql-api-in-rails/), the `resolve`&nbsp;function takes a proc. A proc, behind the scenes, is just an object that has the `call`&nbsp;method called on it. You can think of it like this:
 
 1. You create a proc `-> (val) { val + 1 }`
 2. Ruby then dynamically builds a class around it and converts the block to a method called `call`:

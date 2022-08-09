@@ -21,7 +21,7 @@ permalink: "/2018/05/05/beware-of-complex-filtering-in-graphql/"
 ---
 ![]({{ site.baseurl }}/assets/images/2018/05/john-carlisle-539580-unsplash-1024x683.jpg)
 
-When something [new and powerful](https://graphqlme.com/2018/04/15/with-great-power/) that enables a different paradigm for working with and seeing something, people can sometimes take it to far and go overboard with it. This can be seen clearly in adoption of new technologies, as well as new programming patterns. I know I sometimes have a habit of learning some new design pattern and then seeing and using it everywhere, only to come back 6 months or a year later and think "yeah, I was really into doing that back then, but there was probably a better way to do it."
+When something [new and powerful](/2018/04/15/with-great-power/) that enables a different paradigm for working with and seeing something, people can sometimes take it to far and go overboard with it. This can be seen clearly in adoption of new technologies, as well as new programming patterns. I know I sometimes have a habit of learning some new design pattern and then seeing and using it everywhere, only to come back 6 months or a year later and think "yeah, I was really into doing that back then, but there was probably a better way to do it."
 
 Of course, GraphQL is no exception to this. And there's one thing in particular that I see many trying to reach for that has been gnawing away at me.
 

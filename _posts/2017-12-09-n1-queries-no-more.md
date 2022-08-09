@@ -107,7 +107,7 @@ Types::QueryType = GraphQL::ObjectType.define do
 end
 ```
 
-_Side note: if you're not familiar with connections, you can read my post about how to use them [here](https://graphqlme.com/2017/09/24/graphql-connections-rails/)._
+_Side note: if you're not familiar with connections, you can read my post about how to use them [here](/2017/09/24/graphql-connections-rails/)._
 
 And this certainly works:
 

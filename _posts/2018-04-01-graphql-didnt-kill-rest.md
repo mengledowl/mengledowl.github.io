@@ -26,7 +26,7 @@ You’ve probably seen the articles. They have catchy titles like “REST in Pea
 
 I don’t believe that this is the case, however.
 
-Now I certainly believe that GraphQL is superior to RESTful architecture [in most cases](https://graphqlme.com/2018/03/10/when-not-to-use-graphql/). There are [many good reasons](https://graphqlme.com/2017/10/15/5-things-love-graphql/)&nbsp;to use GraphQL, [back-end included](https://graphqlme.com/2017/12/17/benefits-of-graphql-on-the-backend/), and [many of the fears](https://graphqlme.com/2017/09/09/are-you-afraid/)&nbsp;out there are [unfounded](https://graphqlme.com/2018/01/13/dispelling-common-misconceptions-about-graphql/). But did GraphQL really kill REST?
+Now I certainly believe that GraphQL is superior to RESTful architecture [in most cases](/2018/03/10/when-not-to-use-graphql/). There are [many good reasons](/2017/10/15/5-things-love-graphql/)&nbsp;to use GraphQL, [back-end included](/2017/12/17/benefits-of-graphql-on-the-backend/), and [many of the fears](/2017/09/09/are-you-afraid/)&nbsp;out there are [unfounded](/2018/01/13/dispelling-common-misconceptions-about-graphql/). But did GraphQL really kill REST?
 
 ## I’m Not Dead Yet
 

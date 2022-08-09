@@ -22,7 +22,7 @@ The other day, a coworker pulled up a chair next to me and said one of my favori
 
 "I've got some questions for you about GraphQL."
 
-I was among the [first to start to venture out into the world of GraphQL at RevUnit](https://graphqlme.com/2017/09/04/building-a-graphql-api-in-rails/), and I've been been singing it's praises ever since in my mission to **expand it's reach and help turn it into the standard for APIs**. As a result, people will oftentimes come to me when they have GraphQL questions as they're getting ramped up.
+I was among the [first to start to venture out into the world of GraphQL at RevUnit](/2017/09/04/building-a-graphql-api-in-rails/), and I've been been singing it's praises ever since in my mission to **expand it's reach and help turn it into the standard for APIs**. As a result, people will oftentimes come to me when they have GraphQL questions as they're getting ramped up.
 
 ![]({{ site.baseurl }}/assets/images/2017/10/60b5625f2b03a3c8a7b3f64012de1272.1000x588x1.jpg)
 
@@ -41,7 +41,7 @@ I spend a decent amount of time hanging out in the [GraphQL slack](https://graph
 1. Technical questions - eg. how do I do a/b/c in GraphQL/my library of choice?
 2. Best practices questions - eg. what's the best way to do a/b/c or how do you (plural) do a/b/c?
 
-**Technical questions** are generally pretty matter-of-fact in nature - how do I define a connection in ruby? [Like this](https://graphqlme.com/2017/09/24/graphql-connections-rails/). How do I mark a field as required? Use a `!`&nbsp;on your type declaration. These tend to have a clearly defined answer, even if it's complicated. This can also include questions about the fundamentals of GraphQL in general.
+**Technical questions** are generally pretty matter-of-fact in nature - how do I define a connection in ruby? [Like this](/2017/09/24/graphql-connections-rails/). How do I mark a field as required? Use a `!`&nbsp;on your type declaration. These tend to have a clearly defined answer, even if it's complicated. This can also include questions about the fundamentals of GraphQL in general.
 
 **Best practices questions** on the other hand, tend to be much more ambiguous and more difficult to find answers to - what should I do if I have a really long arguments list? What's the best way to do authentication/authorization in GraphQL? These can also oftentimes overlap with the technical questions which at their heart might be more of a question about best practices.
 
