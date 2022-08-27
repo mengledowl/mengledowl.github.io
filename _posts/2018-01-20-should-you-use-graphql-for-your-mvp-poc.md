@@ -2,19 +2,9 @@
 layout: post
 title: Should You Use GraphQL For Your MVP/POC?
 date: 2018-01-20 18:30:03.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '311'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/01/20/should-you-use-graphql-for-your-mvp-poc/"
 ---

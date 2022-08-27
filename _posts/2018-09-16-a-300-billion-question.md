@@ -2,19 +2,9 @@
 layout: post
 title: A $300 Billion Question
 date: 2018-09-16 04:46:49.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '503'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/09/16/a-300-billion-question/"
 ---

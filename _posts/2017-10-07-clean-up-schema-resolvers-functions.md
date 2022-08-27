@@ -2,20 +2,10 @@
 layout: post
 title: Clean Up Your Schema With Resolvers And Functions
 date: 2017-10-07 23:48:27.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Ruby on Rails
 - Tutorials
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '139'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/10/07/clean-up-schema-resolvers-functions/"
 ---

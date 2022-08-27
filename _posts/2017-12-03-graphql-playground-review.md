@@ -2,20 +2,10 @@
 layout: post
 title: GraphQL Playground Review
 date: 2017-12-03 03:01:14.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 - Reviews
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '229'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/12/03/graphql-playground-review/"
 ---

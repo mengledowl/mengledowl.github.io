@@ -2,20 +2,10 @@
 layout: post
 title: GraphQL Connections In Rails
 date: 2017-09-24 00:49:45.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Ruby on Rails
 - Tutorials
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '83'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/09/24/graphql-connections-rails/"
 ---

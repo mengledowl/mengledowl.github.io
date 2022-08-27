@@ -2,19 +2,9 @@
 layout: post
 title: A New Chapter
 date: 2018-02-11 01:20:01.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - News
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '330'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/02/11/a-new-chapter/"
 ---

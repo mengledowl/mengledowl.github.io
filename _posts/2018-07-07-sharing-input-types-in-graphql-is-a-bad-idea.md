@@ -2,20 +2,10 @@
 layout: post
 title: Sharing Input Types in GraphQL is a Bad Idea
 date: 2018-07-07 13:41:22.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Best Practices
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '483'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/07/07/sharing-input-types-in-graphql-is-a-bad-idea/"
 ---

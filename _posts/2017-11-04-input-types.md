@@ -2,20 +2,10 @@
 layout: post
 title: Shorten Your Argument List With Input Types
 date: 2017-11-04 18:07:48.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Ruby on Rails
 - Tutorials
 tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _thumbnail_id: '192'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/11/04/input-types/"
 ---

@@ -2,31 +2,10 @@
 layout: post
 title: Production Ready GraphQL with Marc-André Giroux
 date: 2020-07-15 14:32:31.000000000 -05:00
-type: post
 excerpt_separator: <!--more-->
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Interviews
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _aioseop_keywords: ''
-  _aioseop_description: ''
-  _aioseop_title: ''
-  _aioseop_custom_link: ''
-  _aioseop_sitemap_exclude: ''
-  _aioseop_disable: ''
-  _aioseop_disable_analytics: ''
-  _aioseop_noindex: ''
-  _aioseop_nofollow: ''
-  _thumbnail_id: '664'
-  _wpas_done_all: '1'
-  _encloseme: '1'
-  _wp_old_date: '2020-07-14'
 author: Matt Engledowl
 permalink: "/2020/07/15/production-ready-graphql-with-marc-andre-giroux/"
 ---

@@ -2,19 +2,9 @@
 layout: post
 title: Interview with Robert Mosolgo - Creator of graphql-ruby
 date: 2017-12-21 13:24:33.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Interviews
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '285'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/12/21/interview-with-robert-mosolgo-creator-of-graphql-ruby/"
 ---

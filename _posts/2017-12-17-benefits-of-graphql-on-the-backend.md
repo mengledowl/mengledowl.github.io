@@ -2,19 +2,9 @@
 layout: post
 title: Benefits of GraphQL on the Backend
 date: 2017-12-17 03:21:09.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '276'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/12/17/benefits-of-graphql-on-the-backend/"
 ---

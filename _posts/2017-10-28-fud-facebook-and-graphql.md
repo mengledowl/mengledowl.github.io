@@ -2,21 +2,9 @@
 layout: post
 title: 'FUD: Facebook and GraphQL'
 date: 2017-10-28 15:19:24.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '151'
-  _wpas_done_all: '1'
-  _wpas_mess: A while back, I wrote about a few different fears that I think hold
-    some people back from using GraphQL. Apparently I missed one.
 author: Matt Engledowl
 permalink: "/2017/10/28/fud-facebook-and-graphql/"
 ---

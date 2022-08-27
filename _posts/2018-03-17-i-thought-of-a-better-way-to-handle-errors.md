@@ -2,19 +2,10 @@
 layout: post
 title: I Thought of a Better Way to Handle Errors
 date: 2018-03-17 14:54:54.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Best Practices
 - Opinion
 tags: []
-meta:
-  _wpas_done_all: '1'
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
 author: Matt Engledowl
 permalink: "/2018/03/17/i-thought-of-a-better-way-to-handle-errors/"
 ---

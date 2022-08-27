@@ -2,20 +2,10 @@
 layout: post
 title: Stop Doing Hash Resolution By Hand
 date: 2017-11-19 00:16:25.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Ruby on Rails
 - Tutorials
 tags: []
-meta:
-  _wpas_done_all: '1'
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '216'
 author: Matt Engledowl
 permalink: "/2017/11/19/stop-doing-hash-resolution-by-hand/"
 ---

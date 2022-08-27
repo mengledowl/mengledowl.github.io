@@ -2,19 +2,8 @@
 layout: post
 title: How is GraphQL "Versionless"?
 date: 2019-04-18 14:40:24.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _aioseop_description: One of the touted advantages to using GraphQL is that it's
-    "versionless" - but what does that mean and how is it possible?
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2019/04/18/how-is-graphql-versionless/"
 ---

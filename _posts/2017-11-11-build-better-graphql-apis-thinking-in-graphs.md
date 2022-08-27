@@ -2,22 +2,10 @@
 layout: post
 title: 'Build Better GraphQL APIs: Thinking In Graphs'
 date: 2017-11-11 22:32:49.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 - Tutorials
 tags: []
-meta:
-  _wpas_done_all: '1'
-  _aioseop_description: A lot of resources on GraphQL talk about this concept of “thinking
-    in graphs”, but what does that mean?
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '201'
 author: Matt Engledowl
 permalink: "/2017/11/11/build-better-graphql-apis-thinking-in-graphs/"
 ---

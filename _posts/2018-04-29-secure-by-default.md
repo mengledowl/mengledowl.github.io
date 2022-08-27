@@ -2,20 +2,10 @@
 layout: post
 title: Secure By Default
 date: 2018-04-29 05:01:08.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Best Practices
 - Opinion
 tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _thumbnail_id: '407'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/04/29/secure-by-default/"
 ---

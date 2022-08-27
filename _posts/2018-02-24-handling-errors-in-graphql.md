@@ -2,20 +2,10 @@
 layout: post
 title: Handling Errors in GraphQL
 date: 2018-02-24 22:34:45.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Best Practices
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '347'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/02/24/handling-errors-in-graphql/"
 ---

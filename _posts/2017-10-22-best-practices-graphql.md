@@ -2,19 +2,9 @@
 layout: post
 title: We Need More Best Practices In GraphQL
 date: 2017-10-22 02:54:02.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _thumbnail_id: '131'
 author: Matt Engledowl
 permalink: "/2017/10/22/best-practices-graphql/"
 ---

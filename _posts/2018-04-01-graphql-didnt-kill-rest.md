@@ -2,19 +2,9 @@
 layout: post
 title: GraphQL Didn't Kill REST
 date: 2018-04-01 02:46:25.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '378'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/04/01/graphql-didnt-kill-rest/"
 ---

@@ -2,19 +2,9 @@
 layout: post
 title: Stop Fighting the Type System
 date: 2017-12-31 04:15:46.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '293'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/12/31/stop-fighting-the-type-system/"
 ---

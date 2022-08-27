@@ -2,22 +2,9 @@
 layout: post
 title: 'Guide: Convince Your Boss/Team To Use GraphQL'
 date: 2017-11-25 18:36:40.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '252'
-  _aioseop_description: Do you want to start using GraphQL at your day job, but just
-    aren't sure how to get the buy-in from your boss, co-workers, and/or team? Here
-    are some tips.
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/11/25/guide-convince-your-bossteam-to-use-graphql/"
 ---

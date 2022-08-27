@@ -2,19 +2,9 @@
 layout: post
 title: Dispelling Common Misconceptions About GraphQL
 date: 2018-01-13 22:14:15.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '306'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/01/13/dispelling-common-misconceptions-about-graphql/"
 ---

@@ -2,22 +2,10 @@
 layout: post
 title: N+1 Queries No More
 date: 2017-12-09 21:28:44.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Ruby on Rails
 - Tutorials
 tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _thumbnail_id: '248'
-  _aioseop_description: GraphQL lends itself pretty heavily to N+1 queries. Here's
-    how you can handle them in graphql-ruby using graphql-batch.
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/12/09/n1-queries-no-more/"
 ---

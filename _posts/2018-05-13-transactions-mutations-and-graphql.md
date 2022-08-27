@@ -2,22 +2,10 @@
 layout: post
 title: Transactions, Mutations, and GraphQL
 date: 2018-05-13 04:16:36.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Best Practices
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _aioseop_description: Ever wondered how you can execute a group of GraphQL mutations
-    within a transaction? So have I. Then I realized that there's a better solution.
-  _thumbnail_id: '424'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/05/13/transactions-mutations-and-graphql/"
 ---

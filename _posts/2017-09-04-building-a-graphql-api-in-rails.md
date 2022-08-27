@@ -2,19 +2,10 @@
 layout: post
 title: Building A GraphQL API In Rails
 date: 2017-09-04 16:33:27.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Ruby on Rails
 - Tutorials
 tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2017/09/04/building-a-graphql-api-in-rails/"
 ---

@@ -2,18 +2,8 @@
 layout: post
 title: Does the GraphQL Spec Contradict Itself?
 date: 2018-06-16 20:50:49.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories: []
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '456'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/06/16/does-the-graphql-spec-contradict-itself/"
 ---

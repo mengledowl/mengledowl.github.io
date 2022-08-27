@@ -2,18 +2,8 @@
 layout: post
 title: Are You Afraid?
 date: 2017-09-09 18:59:00.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories: []
 tags: []
-meta:
-  _edit_last: '1'
-  _wpcom_is_markdown: '1'
-  _wpas_done_all: '1'
-  _thumbnail_id: '74'
 author: Matt Engledowl
 permalink: "/2017/09/09/are-you-afraid/"
 ---

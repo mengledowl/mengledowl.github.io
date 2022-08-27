@@ -2,19 +2,9 @@
 layout: post
 title: GraphQL Has A Subtle Naming Problem
 date: 2018-02-04 00:16:48.000000000 -06:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '322'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2018/02/04/graphql-has-subtle-naming-problem/"
 ---

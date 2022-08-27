@@ -2,20 +2,10 @@
 layout: post
 title: 'Namespaced GraphQL Mutations: It''s A Trap'
 date: 2020-07-09 21:40:50.000000000 -05:00
-type: post
-parent_id: '0'
-published: true
-password: ''
-status: publish
 categories:
 - Best Practices
 - Opinion
 tags: []
-meta:
-  _wpcom_is_markdown: '1'
-  _edit_last: '1'
-  _thumbnail_id: '636'
-  _wpas_done_all: '1'
 author: Matt Engledowl
 permalink: "/2020/07/09/namespaced-graphql-mutations-its-a-trap/"
 ---
